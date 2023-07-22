@@ -1,0 +1,378 @@
+Index: ios/Runner/GeneratedPluginRegistrant.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ios/Runner/GeneratedPluginRegistrant.h b/ios/Runner/GeneratedPluginRegistrant.h
+--- a/ios/Runner/GeneratedPluginRegistrant.h	
++++ b/ios/Runner/GeneratedPluginRegistrant.h	(date 1690021331397)
+@@ -1,0 +1,19 @@
++//
++//  Generated file. Do not edit.
++//
++
++// clang-format off
++
++#ifndef GeneratedPluginRegistrant_h
++#define GeneratedPluginRegistrant_h
++
++#import <Flutter/Flutter.h>
++
++NS_ASSUME_NONNULL_BEGIN
++
++@interface GeneratedPluginRegistrant : NSObject
+++ (void)registerWithRegistry:(NSObject<FlutterPluginRegistry>*)registry;
++@end
++
++NS_ASSUME_NONNULL_END
++#endif /* GeneratedPluginRegistrant_h */
+Index: ios/Runner/GeneratedPluginRegistrant.m
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ios/Runner/GeneratedPluginRegistrant.m b/ios/Runner/GeneratedPluginRegistrant.m
+--- a/ios/Runner/GeneratedPluginRegistrant.m	
++++ b/ios/Runner/GeneratedPluginRegistrant.m	(date 1690021331401)
+@@ -1,0 +1,14 @@
++//
++//  Generated file. Do not edit.
++//
++
++// clang-format off
++
++#import "GeneratedPluginRegistrant.h"
++
++@implementation GeneratedPluginRegistrant
++
+++ (void)registerWithRegistry:(NSObject<FlutterPluginRegistry>*)registry {
++}
++
++@end
+Index: lib/main.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/main.dart b/lib/main.dart
+--- a/lib/main.dart	
++++ b/lib/main.dart	(date 1690020342266)
+@@ -1,8 +1,6 @@
+-
+-
+ import 'package:flutter/material.dart';
+-import 'package:loginsignup/login.dart';
+-import 'package:loginsignup/signin.dart';
++import 'package:app_dev_cohort_task1/login.dart';
++import 'package:app_dev_cohort_task1/signin.dart';
+ 
+ void main() {
+   runApp(MaterialApp(
+Index: lib/signin.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/signin.dart b/lib/signin.dart
+--- a/lib/signin.dart	
++++ b/lib/signin.dart	(date 1690020342248)
+@@ -12,7 +12,7 @@
+   @override
+   Widget build(BuildContext context) {
+     return Container(
+-      decoration: BoxDecoration(
++      decoration: const BoxDecoration(
+           image: DecorationImage(
+               image: AssetImage('assets/screen2.png'), fit: BoxFit.cover)),
+       child: Scaffold(
+@@ -21,30 +21,30 @@
+         body: Stack(
+           children: [
+             Container(
+-                margin: EdgeInsets.only(left:25,top:55),
++                margin: const EdgeInsets.only(left:25,top:55),
+                 alignment: Alignment.topLeft,
+                 child: Row(
+                   children: [
+                     CircleAvatar(
+                       radius: 30,
+-                      backgroundColor: Color(0xFFD6F2F1),
++                      backgroundColor: const Color(0xFFD6F2F1),
+                       child: IconButton(
+                         onPressed: () {
+                           Navigator.pushNamed(context, 'login');
+                         },
+-                        icon: Icon(Icons.arrow_back, color: Colors.black,),
++                        icon: const Icon(Icons.arrow_back, color: Colors.black,),
+                       ),
+                     ),
+-                    SizedBox(width: 8,),
+-                    Text('Sign in',style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),)
++                    const SizedBox(width: 8,),
++                    const Text('Sign in',style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),)
+                   ],
+                 )
+             ),
+             SingleChildScrollView(
+               child: Container(
+-                margin: EdgeInsets.only(left:25,right:25),
++                margin: const EdgeInsets.only(left:25,right:25),
+                 alignment: Alignment.center,
+-                padding: EdgeInsets.only(top:280),
++                padding: const EdgeInsets.only(top:280),
+                 child: Column(
+                   children: [
+ 
+@@ -53,30 +53,30 @@
+                       width: double.infinity,
+                       child: TextField(
+                         decoration: InputDecoration(
+-                          fillColor: Color(0xFFEDF7F7),
++                          fillColor: const Color(0xFFEDF7F7),
+                           filled: true,
+-                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: BorderSide(color: Color(0xFFEDF7F7)),),
++                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: const BorderSide(color: Color(0xFFEDF7F7)),),
+                           labelText: 'Enter your Email',
+                         ),
+                       ),
+                     ),
+-                    SizedBox(height: 20,),
++                    const SizedBox(height: 20,),
+                     SizedBox(
+                       height: 55,
+                       width: double.infinity,
+                       child: TextField(
+                         obscureText: true,
+                         decoration: InputDecoration(
+-                          fillColor: Color(0xFFEDF7F7),
++                          fillColor: const Color(0xFFEDF7F7),
+                           filled: true,
+                           border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),),
+                           labelText: 'Password',
+                         ),
+                       ),
+                     ),
+-                    SizedBox(height: 20,),
++                    const SizedBox(height: 20,),
+                     Container(
+-                        child: Row(
++                        child: const Row(
+                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                           children: [
+                             Row(
+@@ -92,24 +92,24 @@
+                           ],
+                         )
+                     ),
+-                    SizedBox(height: 20,),
++                    const SizedBox(height: 20,),
+ 
+                     SizedBox(
+                       height: 55,
+                       width: double.infinity,
+                       child: ElevatedButton(
+                         onPressed: () {},
+-                        child: Text('Sign In', style: TextStyle(fontSize: 15),),
+-                        style: ElevatedButton.styleFrom(backgroundColor: Color(0xFF4DAE60),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
++                        child: const Text('Sign In', style: TextStyle(fontSize: 15),),
++                        style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4DAE60),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+                       ),
+                     ),
+-                    SizedBox(height: 20,),
++                    const SizedBox(height: 20,),
+                     Container(
+-                      margin: EdgeInsets.only(right:25,left:25,bottom: 120),
++                      margin: const EdgeInsets.only(right:25,left:25,bottom: 120),
+                       alignment: Alignment.bottomCenter,
+                       child: RichText(
+                         textAlign: TextAlign.center,
+-                        text: TextSpan(
++                        text: const TextSpan(
+                             children: <TextSpan>[
+                               TextSpan(text: 'Don\'t have an account? ',style: TextStyle(color: Colors.black,fontSize: 15, fontWeight: FontWeight.bold)),
+                               TextSpan(text: 'Sign Up', style: TextStyle(color: Color(0xFF4DAE60),fontSize: 15, fontWeight: FontWeight.bold)),
+@@ -117,12 +117,12 @@
+                         ),
+                       ),
+                     ),
+-                    SizedBox(height: 35,),
++                    const SizedBox(height: 35,),
+                     Container(
+                       alignment: Alignment.bottomCenter ,
+                       child: RichText(
+                         textAlign: TextAlign.center,
+-                        text: TextSpan(
++                        text: const TextSpan(
+                             children: <TextSpan>[
+                               TextSpan(text: 'By clicking "Sign In" above, you agree to 7krave\'s ',style: TextStyle(color: Colors.black,fontSize: 13)),
+                               TextSpan(text: 'Terms & Conditions ', style: TextStyle(color: Colors.orangeAccent,fontSize: 13)),
+Index: linux/flutter/generated_plugins.cmake
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/linux/flutter/generated_plugins.cmake b/linux/flutter/generated_plugins.cmake
+--- a/linux/flutter/generated_plugins.cmake	
++++ b/linux/flutter/generated_plugins.cmake	(date 1690021331418)
+@@ -1,0 +1,23 @@
++#
++# Generated file, do not edit.
++#
++
++list(APPEND FLUTTER_PLUGIN_LIST
++)
++
++list(APPEND FLUTTER_FFI_PLUGIN_LIST
++)
++
++set(PLUGIN_BUNDLED_LIBRARIES)
++
++foreach(plugin ${FLUTTER_PLUGIN_LIST})
++  add_subdirectory(flutter/ephemeral/.plugin_symlinks/${plugin}/linux plugins/${plugin})
++  target_link_libraries(${BINARY_NAME} PRIVATE ${plugin}_plugin)
++  list(APPEND PLUGIN_BUNDLED_LIBRARIES $<TARGET_FILE:${plugin}_plugin>)
++  list(APPEND PLUGIN_BUNDLED_LIBRARIES ${${plugin}_bundled_libraries})
++endforeach(plugin)
++
++foreach(ffi_plugin ${FLUTTER_FFI_PLUGIN_LIST})
++  add_subdirectory(flutter/ephemeral/.plugin_symlinks/${ffi_plugin}/linux plugins/${ffi_plugin})
++  list(APPEND PLUGIN_BUNDLED_LIBRARIES ${${ffi_plugin}_bundled_libraries})
++endforeach(ffi_plugin)
+Index: linux/flutter/generated_plugin_registrant.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/linux/flutter/generated_plugin_registrant.h b/linux/flutter/generated_plugin_registrant.h
+--- a/linux/flutter/generated_plugin_registrant.h	
++++ b/linux/flutter/generated_plugin_registrant.h	(date 1690021331411)
+@@ -1,0 +1,15 @@
++//
++//  Generated file. Do not edit.
++//
++
++// clang-format off
++
++#ifndef GENERATED_PLUGIN_REGISTRANT_
++#define GENERATED_PLUGIN_REGISTRANT_
++
++#include <flutter_linux/flutter_linux.h>
++
++// Registers Flutter plugins.
++void fl_register_plugins(FlPluginRegistry* registry);
++
++#endif  // GENERATED_PLUGIN_REGISTRANT_
+Index: linux/flutter/generated_plugin_registrant.cc
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/linux/flutter/generated_plugin_registrant.cc b/linux/flutter/generated_plugin_registrant.cc
+--- a/linux/flutter/generated_plugin_registrant.cc	
++++ b/linux/flutter/generated_plugin_registrant.cc	(date 1690021331414)
+@@ -1,0 +1,11 @@
++//
++//  Generated file. Do not edit.
++//
++
++// clang-format off
++
++#include "generated_plugin_registrant.h"
++
++
++void fl_register_plugins(FlPluginRegistry* registry) {
++}
+Index: android/.gradle/buildOutputCleanup/cache.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/android/.gradle/buildOutputCleanup/cache.properties b/android/.gradle/buildOutputCleanup/cache.properties
+new file mode 100644
+--- /dev/null	(date 1690020081640)
++++ b/android/.gradle/buildOutputCleanup/cache.properties	(date 1690020081640)
+@@ -0,0 +1,2 @@
++#Sat Jul 22 15:31:21 IST 2023
++gradle.version=7.5
+Index: windows/flutter/generated_plugins.cmake
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/windows/flutter/generated_plugins.cmake b/windows/flutter/generated_plugins.cmake
+--- a/windows/flutter/generated_plugins.cmake	
++++ b/windows/flutter/generated_plugins.cmake	(date 1690021331432)
+@@ -1,0 +1,23 @@
++#
++# Generated file, do not edit.
++#
++
++list(APPEND FLUTTER_PLUGIN_LIST
++)
++
++list(APPEND FLUTTER_FFI_PLUGIN_LIST
++)
++
++set(PLUGIN_BUNDLED_LIBRARIES)
++
++foreach(plugin ${FLUTTER_PLUGIN_LIST})
++  add_subdirectory(flutter/ephemeral/.plugin_symlinks/${plugin}/windows plugins/${plugin})
++  target_link_libraries(${BINARY_NAME} PRIVATE ${plugin}_plugin)
++  list(APPEND PLUGIN_BUNDLED_LIBRARIES $<TARGET_FILE:${plugin}_plugin>)
++  list(APPEND PLUGIN_BUNDLED_LIBRARIES ${${plugin}_bundled_libraries})
++endforeach(plugin)
++
++foreach(ffi_plugin ${FLUTTER_FFI_PLUGIN_LIST})
++  add_subdirectory(flutter/ephemeral/.plugin_symlinks/${ffi_plugin}/windows plugins/${ffi_plugin})
++  list(APPEND PLUGIN_BUNDLED_LIBRARIES ${${ffi_plugin}_bundled_libraries})
++endforeach(ffi_plugin)
+Index: windows/flutter/generated_plugin_registrant.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/windows/flutter/generated_plugin_registrant.h b/windows/flutter/generated_plugin_registrant.h
+--- a/windows/flutter/generated_plugin_registrant.h	
++++ b/windows/flutter/generated_plugin_registrant.h	(date 1690021331424)
+@@ -1,0 +1,15 @@
++//
++//  Generated file. Do not edit.
++//
++
++// clang-format off
++
++#ifndef GENERATED_PLUGIN_REGISTRANT_
++#define GENERATED_PLUGIN_REGISTRANT_
++
++#include <flutter/plugin_registry.h>
++
++// Registers Flutter plugins.
++void RegisterPlugins(flutter::PluginRegistry* registry);
++
++#endif  // GENERATED_PLUGIN_REGISTRANT_
+Index: windows/flutter/generated_plugin_registrant.cc
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/windows/flutter/generated_plugin_registrant.cc b/windows/flutter/generated_plugin_registrant.cc
+--- a/windows/flutter/generated_plugin_registrant.cc	
++++ b/windows/flutter/generated_plugin_registrant.cc	(date 1690021331427)
+@@ -1,0 +1,11 @@
++//
++//  Generated file. Do not edit.
++//
++
++// clang-format off
++
++#include "generated_plugin_registrant.h"
++
++
++void RegisterPlugins(flutter::PluginRegistry* registry) {
++}
+diff --git a/android/.gradle/7.5/gc.properties b/android/.gradle/7.5/gc.properties
+new file mode 100644
+diff --git a/android/.gradle/7.5/dependencies-accessors/gc.properties b/android/.gradle/7.5/dependencies-accessors/gc.properties
+new file mode 100644
+diff --git a/android/.gradle/vcs-1/gc.properties b/android/.gradle/vcs-1/gc.properties
+new file mode 100644
